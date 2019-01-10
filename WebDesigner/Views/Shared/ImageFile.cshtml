@@ -1,0 +1,4 @@
+﻿@using EPiServer.Web.Mvc.Html
+@model WebDesigner.Models.Media.ImageFile
+
+<img src="@Url.ContentUrl(Model.ContentLink)" alt="@Model.Description" />

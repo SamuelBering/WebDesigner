@@ -2,6 +2,16 @@
 <languages>
   <language name="English" id="en">
     <contenttypes>
+      <imagefile>
+        <name>Image File</name>
+        <description>Use this to upload image files.</description>
+        <properties>
+          <Description>
+            <caption>Description</caption>
+            <help>Describe this picture</help>
+          </Description>
+        </properties>
+      </imagefile>
       <anyfile>
         <name>Any File</name>
         <description>Use this to upload any type of file.</description>
@@ -60,6 +70,16 @@
   </language>
   <language name="Svenska" id="sv">
     <contenttypes>
+      <imagefile>
+        <name>Bildfil</name>
+        <description>Använd denna för att ladda upp en bildfil.</description>
+        <properties>
+          <Description>
+            <caption>Beskrivning</caption>
+            <help>Beskriv bilden</help>
+          </Description>
+        </properties>
+      </imagefile>
       <anyfile>
         <name>Valfri fil</name>
         <description>Använd denna för att ladda upp vilken typ av fil som helst.</description>
