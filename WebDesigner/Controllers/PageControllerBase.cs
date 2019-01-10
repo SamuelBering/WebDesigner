@@ -8,13 +8,18 @@ using EPiServer.Web.Mvc;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
+using EPiServer.Web;
+
 namespace WebDesigner.Controllers
 {
     public abstract class PageControllerBase<T> : PageController<T> where T : SitePageData
     {
         protected readonly IContentLoader loader;
-        public PageControllerBase(IContentLoader loader)
+        protected readonly ISiteDefinitionResolver siteDefinitionResolver;
+
+        public PageControllerBase(IContentLoader loader, ISiteDefinitionResolver siteDefinitionResolver)
         {
+            this.siteDefinitionResolver = siteDefinitionResolver;
             this.loader = loader;
         }
         public ActionResult Logout()
@@ -22,10 +27,11 @@ namespace WebDesigner.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index");
         }
-        protected IPageViewModel<TPage> CreatePageViewModel<TPage>(TPage currentPage) 
+        protected IPageViewModel<TPage> CreatePageViewModel<TPage>(TPage currentPage)
                     where TPage : SitePageData
         {
             var viewmodel = PageViewModel.Create(currentPage);
+            viewmodel.SiteDefinition = this.siteDefinitionResolver.GetByContent(ContentReference.StartPage, false);
             viewmodel.StartPage = loader.Get<StartPage>(ContentReference.StartPage);
             viewmodel.MenuPages = FilterForVisitor.Filter(
             loader.GetChildren<SitePageData>(ContentReference.StartPage))

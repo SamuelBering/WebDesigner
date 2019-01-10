@@ -28,8 +28,14 @@ namespace WebDesigner.Models.Pages
         [CultureSpecific]
         [Display(Name = "Footer text",
             Description = "The footer text will be shown at the bottom of every page.",
-            GroupName = SiteTabNames.SiteSettings, Order = 10)]
+            GroupName = SiteTabNames.SiteSettings, Order = 20)]
         public virtual string FooterText { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Company name",
+            Description = "Company name will be shown in the top left corner of every page",
+            GroupName = SiteTabNames.SiteSettings, Order = 10)]
+        public virtual string CompanyName { get; set; }
 
         [CultureSpecific]
         [Display(Name = "Main content area",
