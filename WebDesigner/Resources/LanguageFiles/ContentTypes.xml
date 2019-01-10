@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language name="English" id="en">
+    <contenttypes>
+      <anyfile>
+        <name>Any File</name>
+        <description>Use this to upload any type of file.</description>
+      </anyfile>
+      <sitepagedata>
+        <properties>
+          <metatitle>
+            <caption>Page title</caption>
+            <help>Between 5 and 60 characters that will be shown in Google search results.</help>
+          </metatitle>
+          <metakeywords>
+            <caption>Page keywords</caption>
+            <help>Comma-separated keywords used to boost ranking in Google search results.</help>
+          </metakeywords>
+          <metadescription>
+            <caption>Page description</caption>
+            <help>A short paragraph that will be shown in Google search results.</help>
+          </metadescription>
+          <PageImage>
+            <caption>Page image</caption>
+            <help>Page image representing this page</help>
+          </PageImage>
+        </properties>
+      </sitepagedata>
+      <startpage>
+        <name>Start</name>
+        <description>The home page for a website with an area for blocks and partial pages.</description>
+        <properties>         
+          <FooterText>
+            <caption>Content in footer</caption>
+            <help>This content will be shown in the footer for this site</help>
+          </FooterText>
+          <CompanyName>
+            <caption>Name of the company</caption>
+            <help>Company name will be shown in the top left corner of every page</help>
+          </CompanyName>
+          <MainContentArea>
+            <caption>Main content area</caption>
+            <help>Drag and drop images, blocks, folders, and pages with partial templates.</help>
+          </MainContentArea>
+          <BackgroundImage>
+            <caption>Background image</caption>
+            <help>Choose a background image for this page.</help>
+          </BackgroundImage>
+          <SliderContentArea>
+            <caption>Slider content area</caption>
+            <help>Drag and drop images, blocks and pages with partial templates.</help>
+          </SliderContentArea>
+          <RelatedContentArea>
+            <caption>Related content area</caption>
+            <help>Drag and drop images, blocks and pages with partial templates.</help>
+          </RelatedContentArea>
+        </properties>
+      </startpage>
+    </contenttypes>
+  </language>
+  <language name="Svenska" id="sv">
+    <contenttypes>
+      <anyfile>
+        <name>Valfri fil</name>
+        <description>Använd denna för att ladda upp vilken typ av fil som helst.</description>
+      </anyfile>
+      <sitepagedata>
+        <properties>
+          <metatitle>
+            <caption>Namn på sidan</caption>
+            <help>Mellan 5 och 60 tecken som visas i Googles sökresultat.</help>
+          </metatitle>
+          <metakeywords>
+            <caption>Sidans nyckelord</caption>
+            <help>Kommaseparerade sökord används för att öka rankningen i Googles sökresultat.</help>
+          </metakeywords>
+          <metadescription>
+            <caption>Sidbeskrivning</caption>
+            <help>Ett kort stycke som visas i Googles sökresultat.</help>
+          </metadescription>
+          <PageImage>
+            <caption>Sidbild</caption>
+            <help>Bild som representerar den här sidan</help>
+          </PageImage>
+        </properties>
+      </sitepagedata>
+      <startpage>
+        <name>Start</name>
+        <description>Hemsidan för en webbplats med ett område för block och sidor.</description>
+        <properties>
+          <FooterText>
+            <caption>Innehåll i sidfot</caption>
+            <help>Detta innehåll kommer att visas i sidfoten</help>
+          </FooterText>
+          <CompanyName>
+            <caption>Företagets namn</caption>
+            <help>Företagets namn kommer att visas i övre vänstra hörnet på sajtens alla sidor"</help>
+          </CompanyName>
+          <MainContentArea>
+            <caption>Huvudinnehåll för denna sida</caption>
+            <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
+          </MainContentArea>
+          <BackgroundImage>
+            <caption>Bakgrundsbild för denna sida</caption>
+            <help>Välj en bakgrundsbild för den här sidan.</help>
+          </BackgroundImage>
+          <SliderContentArea>
+            <caption>Innehåll för denna sida som animeras</caption>
+            <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
+          </SliderContentArea>
+          <RelatedContentArea>
+            <caption>Relaterat innehåll</caption>
+            <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
+          </RelatedContentArea>
+        </properties>
+      </startpage>
+    </contenttypes>
+  </language>
+</languages>

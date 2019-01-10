@@ -252,6 +252,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
+    <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
@@ -266,9 +267,7 @@
     <Compile Include="SiteTags.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Resources\LanguageFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -277,6 +276,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="IndexingService\IndexingService.svc" />
     <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
+    <Content Include="Resources\LanguageFiles\ContentTypes.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
