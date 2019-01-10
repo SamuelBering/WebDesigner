@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 
 namespace WebDesigner.Models.Pages
 {
@@ -16,15 +17,7 @@ namespace WebDesigner.Models.Pages
         [Display(Name = "Heading", Description = "If the Heading is not set, the page falls back to showing the Name.",
             GroupName = SystemTabNames.Content, Order = 10)]
         public virtual string Heading { get; set; }
-
-        [CultureSpecific]
-        [Display(
-            Name = "Main body",
-            Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
-            GroupName = SystemTabNames.Content,
-            Order = 20)]
-        public virtual XhtmlString MainBody { get; set; }
-
+     
         [CultureSpecific]
         [Display(Name = "Footer text",
             Description = "The footer text will be shown at the bottom of every page.",
@@ -41,10 +34,34 @@ namespace WebDesigner.Models.Pages
         [Display(Name = "Main content area",
             Description = "Drag and drop images, blocks, folders, and pages with partial templates.",
             GroupName = SystemTabNames.Content,
-            Order = 30)]
+            Order = 20)]
         [AllowedTypes(typeof(StandardPage), typeof(BlockData),
                       typeof(ImageData), typeof(ContentFolder))]
         public virtual ContentArea MainContentArea { get; set; }
+
+        [Display(Name = "Background image",
+           GroupName = SystemTabNames.Content, Order = 30)]
+        [UIHint(UIHint.Image)] // filters to only show images
+        public virtual ContentReference BackgroundImage { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Slider content area",
+          Description = "Drag and drop images, blocks and pages with partial templates.",
+          GroupName = SystemTabNames.Content,
+          Order = 40)]
+        [AllowedTypes(typeof(StandardPage), typeof(BlockData),
+                    typeof(ImageData))]
+        public virtual ContentArea SliderContentArea { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Related content area",
+          Description = "Drag and drop images, blocks and pages with partial templates.",
+          GroupName = SystemTabNames.Content,
+          Order = 50)]
+        [AllowedTypes(typeof(StandardPage), typeof(BlockData),
+                    typeof(ImageData))]
+        public virtual ContentArea RelatedContentArea { get; set; }
+
 
     }
 }
