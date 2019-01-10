@@ -30,7 +30,7 @@ namespace WebDesigner.Models.Pages
         public virtual string MetaDescription { get; set; }
 
         [Display(Name = "Page image",
-            GroupName = SystemTabNames.Content, Order = 100)]
+            GroupName = SystemTabNames.Content, Order = 10)]
         [UIHint(UIHint.Image)] // filters to only show images
         public virtual ContentReference PageImage { get; set; }
     }

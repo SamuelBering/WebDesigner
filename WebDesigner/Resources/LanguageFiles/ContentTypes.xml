@@ -66,6 +66,28 @@
           </RelatedContentArea>
         </properties>
       </startpage>
+      <aboutuspage>
+        <name>About us</name>
+        <description>The about-us page for a website with two areas for blocks and partial pages.</description>
+        <properties>
+          <MainContentArea>
+            <caption>Main content area</caption>
+            <help>Drag and drop images, blocks, folders, and pages with partial templates.</help>
+          </MainContentArea>
+          <MainContentAreaHeading>
+            <caption>Main content area heading</caption>
+            <help>A short heading above the main content area</help>
+          </MainContentAreaHeading>
+          <MainContentAreaIntro>
+            <caption>Main content area intro</caption>
+            <help>An intro text under the main content area heading</help>
+          </MainContentAreaIntro>
+          <RelatedContentArea>
+            <caption>Related content area</caption>
+            <help>Drag and drop images, blocks and pages with partial templates.</help>
+          </RelatedContentArea>
+        </properties>
+      </aboutuspage>
     </contenttypes>
   </language>
   <language name="Svenska" id="sv">
@@ -134,6 +156,28 @@
           </RelatedContentArea>
         </properties>
       </startpage>
+      <aboutuspage>
+        <name>Om oss</name>
+        <description>Om-oss-info med två områden för bilder, block, mappar och sidor med partiella mallar</description>
+        <properties>
+          <MainContentArea>
+            <caption>Huvudinnehåll för denna sida</caption>
+            <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
+          </MainContentArea>
+          <MainContentAreaHeading>
+            <caption>Rubrik för huvudinnehåll</caption>
+            <help>En kort inledande rubrik</help>
+          </MainContentAreaHeading>
+          <MainContentAreaIntro>
+            <caption>Intro-text för huvudinnehåll</caption>
+            <help>En inledande text under rubriken för huvudinnehåll</help>
+          </MainContentAreaIntro>
+          <RelatedContentArea>
+            <caption>Relaterat innehåll</caption>
+            <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
+          </RelatedContentArea>
+        </properties>
+      </aboutuspage>
     </contenttypes>
   </language>
 </languages>

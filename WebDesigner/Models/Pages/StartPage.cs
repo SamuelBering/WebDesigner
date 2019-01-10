@@ -12,12 +12,7 @@ namespace WebDesigner.Models.Pages
     [SiteStartIcon]
     [AvailableContentTypes(Include = new[] { typeof(StandardPage) })]
     public class StartPage : SitePageData
-    {
-        //[CultureSpecific]
-        //[Display(Name = "Heading", Description = "If the Heading is not set, the page falls back to showing the Name.",
-        //    GroupName = SystemTabNames.Content, Order = 10)]
-        //public virtual string Heading { get; set; }
-     
+    {     
         [CultureSpecific]
         [Display(Name = "Footer text",
             Description = "The footer text will be shown at the bottom of every page.",
