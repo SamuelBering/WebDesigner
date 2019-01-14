@@ -294,6 +294,18 @@ a:hover {
 	color: #1BBD36;
 }
 
+.leftNavigation {
+    font-size: 12px;
+    top: 40vh;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+    .leftNavigation li {
+        display: inline-block;
+        width: 150px;
+    }
+
 .hi-icon-effect i.fa:hover {
 	background:#fff;
 	color: #1BBD36;

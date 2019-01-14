@@ -39,7 +39,7 @@
       <startpage>
         <name>Start</name>
         <description>The home page for a website with an area for blocks and partial pages.</description>
-        <properties>         
+        <properties>
           <FooterText>
             <caption>Content in footer</caption>
             <help>This content will be shown in the footer for this site</help>
@@ -86,8 +86,26 @@
             <caption>Related content area</caption>
             <help>Drag and drop images, blocks and pages with partial templates.</help>
           </RelatedContentArea>
+          <MainBodyHeading>
+            <caption>Main body heading</caption>
+            <help>A short heading above the main body</help>
+          </MainBodyHeading>
+          <MainBodyImage>
+            <caption>Main body image</caption>
+            <help>An image above under the Main body heading and above the Main body</help>
+          </MainBodyImage>
         </properties>
       </aboutuspage>
+      <staffpage>
+        <name>Staff</name>
+        <description>The staff page let you present your staff</description>
+        <properties>
+          <StaffImage>
+            <caption>Picture of the staff</caption>
+            <help>A picture placed above Main body</help>
+          </StaffImage>
+        </properties>
+      </staffpage>
     </contenttypes>
   </language>
   <language name="Svenska" id="sv">
@@ -176,8 +194,26 @@
             <caption>Relaterat innehåll</caption>
             <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
           </RelatedContentArea>
+          <MainBodyHeading>
+            <caption>Rubrik för Main body</caption>
+            <help>En kort inledande text ovanför Main body</help>
+          </MainBodyHeading>
+          <MainBodyImage>
+            <caption>Bild för Main body</caption>
+            <help>En bild placerad mellan Main body heading och Main body</help>
+          </MainBodyImage>
         </properties>
       </aboutuspage>
+      <staffpage>
+        <name>Medarbetare</name>
+        <description>Denna sidtyp kan användas för att presentera dina medarbetare</description>
+        <properties>
+          <StaffImage>
+            <caption>Bild på medarbetaren</caption>
+            <help>En bild placerad ovanför Main body</help>
+          </StaffImage>
+        </properties>
+      </staffpage>
     </contenttypes>
   </language>
 </languages>

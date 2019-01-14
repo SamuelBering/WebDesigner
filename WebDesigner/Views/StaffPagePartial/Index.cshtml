@@ -1,0 +1,10 @@
+﻿@using WebDesigner.Models.ViewModels
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<WebDesigner.Models.Pages.StaffPage>
+
+<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <a href="@Url.ContentUrl(Model.CurrentPage.ContentLink)">
+        <img src="@(Model.CurrentPage.StaffImage!=null ? Url.ContentUrl(Model.CurrentPage.StaffImage):Url.Content("~/static/images/services/1.jpg"))" alt="">
+        @Html.PropertyFor(m => m.CurrentPage.MainBody)
+    </a>
+</div>

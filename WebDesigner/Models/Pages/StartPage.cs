@@ -8,7 +8,11 @@ using EPiServer.Web;
 
 namespace WebDesigner.Models.Pages
 {
-    [ContentType(DisplayName = "Start", GroupName = SiteGroupNames.Specialized, Order = 10, GUID = "54cc15bb-df6a-4b00-a243-c9791476b250", Description = "The home page for a website with an area for blocks and partial pages.")]
+    [ContentType(DisplayName = "Start", 
+        GroupName = SiteGroupNames.Specialized, 
+        Order = 10, 
+        GUID = "54cc15bb-df6a-4b00-a243-c9791476b250", 
+        Description = "The home page for a website with an area for blocks and partial pages.")]
     [SiteStartIcon]
     [AvailableContentTypes(Include = new[] { typeof(StandardPage) })]
     public class StartPage : SitePageData

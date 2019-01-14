@@ -1,0 +1,32 @@
+﻿@using WebDesigner.Models.ViewModels
+@using WebDesigner.Models.Pages
+@model IPageViewModel<SitePageData>
+@{
+    // nest the left navigation inside the root layout
+    Layout = "~/Views/Shared/Layouts/_Root.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 leftNavigation">         
+                @Html.ContentLink(Model.CurrentPage)
+                <ul>
+                    @foreach (SitePageData page in Model.MenuPages)
+                    {
+                        <li>@Html.ContentLink(page.ContentLink)</li>
+                    }
+                </ul>
+        </div>
+        <div class="col-md-10">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+@*<div class="row">
+        <div class="span4">
+            @RenderSection("_LeftNavigationMenu", required: false)
+        </div>
+        <div class="span8">
+            @RenderBody()
+        </div>
+    </div>*@

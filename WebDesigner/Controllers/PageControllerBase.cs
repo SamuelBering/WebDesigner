@@ -33,9 +33,13 @@ namespace WebDesigner.Controllers
             var viewmodel = PageViewModel.Create(currentPage);
             viewmodel.SiteDefinition = this.siteDefinitionResolver.GetByContent(ContentReference.StartPage, false);
             viewmodel.StartPage = loader.Get<StartPage>(ContentReference.StartPage);
-            viewmodel.MenuPages = FilterForVisitor.Filter(
-            loader.GetChildren<SitePageData>(ContentReference.StartPage))
-            .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+            //viewmodel.MenuPages = FilterForVisitor
+            //    .Filter(loader.GetChildren<SitePageData>(ContentReference.StartPage))
+            //    .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            viewmodel.MenuPages = FilterForVisitor
+                .Filter(loader.GetChildren<SitePageData>(currentPage.ContentLink))
+                .Cast<SitePageData>().Where(page => page.VisibleInMenu);
             viewmodel.Section = currentPage.ContentLink.GetSection();
             return viewmodel;
         }

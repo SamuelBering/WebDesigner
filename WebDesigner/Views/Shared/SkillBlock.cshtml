@@ -1,0 +1,12 @@
+﻿@model WebDesigner.Models.Blocks.SkillBlock
+
+<h3 @Html.EditAttributes(m => m.SkillHeading)>
+    @Model.SkillHeading
+</h3>
+
+<div class="progress">
+    <div class="progress-bar color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.SkillValue ?? 50)%;background:@(Model.SkillColor ?? "#2d7da4");">
+        <span style="border-color: #2d7da4 transparent transparent transparent;background:@(Model.SkillColor ?? "#2d7da4");" class="bar-width">@(Model.SkillValue ?? 50)%</span>
+    </div>
+
+</div>
