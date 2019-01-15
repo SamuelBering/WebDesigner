@@ -6,16 +6,27 @@
     Layout = "~/Views/Shared/Layouts/_Root.cshtml";
 }
 
+@section _BreadCrump{
+    <div id="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+            </div>
+        </div>
+    </div>
+}
+
 <div class="container">
     <div class="row">
-        <div class="col-md-1 leftNavigation">         
-                @Html.ContentLink(Model.CurrentPage)
-                <ul>
-                    @foreach (SitePageData page in Model.MenuPages)
-                    {
-                        <li>@Html.ContentLink(page.ContentLink)</li>
-                    }
-                </ul>
+        <div class="col-md-1 leftNavigation">
+            @Html.ContentLink(Model.CurrentPage)
+            <ul>
+                @foreach (SitePageData page in Model.MenuPages)
+                {
+                    <li>@Html.ContentLink(page.ContentLink)</li>
+                }
+            </ul>
         </div>
         <div class="col-md-10">
             @RenderBody()

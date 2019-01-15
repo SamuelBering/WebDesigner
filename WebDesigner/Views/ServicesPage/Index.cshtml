@@ -1,0 +1,33 @@
+﻿@using WebDesigner.Models.ViewModels
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<WebDesigner.Models.Pages.ServicesPage>
+
+@{
+    Layout = "~/Views/Shared/Layouts/_LeftNavigation.cshtml";
+}
+
+<div class="services">
+    <div class="container">
+        <h3 @Html.EditAttributes(m => m.CurrentPage.MainBodyHeading)>
+            @Model.CurrentPage.MainBodyHeading
+        </h3>
+        <hr>
+
+        <div class="col-md-6">
+            @Html.PropertyFor(m => m.CurrentPage.MainBody, new { CssClass = "col-md-6" })
+            @*<img src="@Url.Content("~/static/images/4.jpg")" class="img-responsive">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat
+                    libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
+                    libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
+                    libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque
+                </p>*@
+        </div>
+
+        <div class="col-md-6">
+            <div class="media">
+                @Html.PropertyFor(m => m.CurrentPage.MainContentArea, new { CustomTag = "ul" })
+            </div>
+        </div>
+    </div>
+</div>

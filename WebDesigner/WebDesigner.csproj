@@ -245,6 +245,8 @@
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
+    <Compile Include="Controllers\ServicesPageController.cs" />
+    <Compile Include="Controllers\ServicePageController.cs" />
     <Compile Include="Controllers\StaffPagePartialController.cs" />
     <Compile Include="Controllers\StaffPageController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
@@ -258,6 +260,8 @@
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Pages\ServicePage.cs" />
+    <Compile Include="Models\Pages\ServicesPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StaffPage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
@@ -283,7 +287,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="IndexingService\IndexingService.svc" />
     <Content Include="modules\_protected\EPiServer.Search.Cms\IndexContent.aspx" />
-    <Content Include="Resources\LanguageFiles\ContentTypes.xml" />
+    <Content Include="Resources\LanguageFiles\ContentTypes.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -460,6 +466,8 @@
     <Content Include="Views\StaffPage\Index.cshtml" />
     <Content Include="Views\StaffPagePartial\Index.cshtml" />
     <Content Include="Views\Shared\Layouts\_LeftNavigation.cshtml" />
+    <Content Include="Views\ServicesPage\Index.cshtml" />
+    <Content Include="Views\ServicePage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
