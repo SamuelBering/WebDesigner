@@ -2,6 +2,7 @@
 using EPiServer.Core;
 using System.Collections.Generic;
 using EPiServer.Web;
+using EPiServer;
 
 namespace WebDesigner.Models.ViewModels
 {
@@ -10,7 +11,11 @@ namespace WebDesigner.Models.ViewModels
         T CurrentPage { get; }
         SiteDefinition SiteDefinition { get; set; }
         StartPage StartPage { get; }
+        SitePageData SubMenuRootPage { get; }
         IEnumerable<SitePageData> MenuPages { get; }
+        IEnumerable<SitePageData> SubMenuPages { get; }
+        IEnumerable<SitePageData> AncestorPages { get; }
         IContent Section { get; }
+        IContentLoader Loader { get; set; }
     }
 }

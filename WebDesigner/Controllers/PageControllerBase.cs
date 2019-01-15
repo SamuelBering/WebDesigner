@@ -9,6 +9,7 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
 using EPiServer.Web;
+using System.Collections.Generic;
 
 namespace WebDesigner.Controllers
 {
@@ -31,15 +32,27 @@ namespace WebDesigner.Controllers
                     where TPage : SitePageData
         {
             var viewmodel = PageViewModel.Create(currentPage);
+            viewmodel.Loader = loader;
             viewmodel.SiteDefinition = this.siteDefinitionResolver.GetByContent(ContentReference.StartPage, false);
             viewmodel.StartPage = loader.Get<StartPage>(ContentReference.StartPage);
-            //viewmodel.MenuPages = FilterForVisitor
-            //    .Filter(loader.GetChildren<SitePageData>(ContentReference.StartPage))
-            //    .Cast<SitePageData>().Where(page => page.VisibleInMenu);
 
             viewmodel.MenuPages = FilterForVisitor
-                .Filter(loader.GetChildren<SitePageData>(currentPage.ContentLink))
+                .Filter(loader.GetChildren<SitePageData>(ContentReference.StartPage))
                 .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            viewmodel.AncestorPages = FilterForVisitor
+                .Filter(loader.GetAncestors(currentPage.ContentLink))
+                .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            if (viewmodel.AncestorPages.Count() <= 1)
+                viewmodel.SubMenuRootPage = currentPage;
+            else
+                viewmodel.SubMenuRootPage = viewmodel.AncestorPages.FirstOrDefault();
+
+            viewmodel.SubMenuPages = FilterForVisitor
+               .Filter(loader.GetChildren<SitePageData>(viewmodel.SubMenuRootPage.ContentLink))
+               .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
             viewmodel.Section = currentPage.ContentLink.GetSection();
             return viewmodel;
         }

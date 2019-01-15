@@ -42,8 +42,7 @@ namespace WebDesigner.Models.Pages
            GroupName = SystemTabNames.Content, Order = 30)]
         [UIHint(UIHint.Image)] // filters to only show images
         public virtual ContentReference BackgroundImage { get; set; }
-
-        [CultureSpecific]
+  
         [Display(Name = "Slider content area",
           Description = "Drag and drop images, blocks and pages with partial templates.",
           GroupName = SystemTabNames.Content,
@@ -52,7 +51,6 @@ namespace WebDesigner.Models.Pages
                     typeof(ImageData))]
         public virtual ContentArea SliderContentArea { get; set; }
 
-        [CultureSpecific]
         [Display(Name = "Related content area",
           Description = "Drag and drop images, blocks and pages with partial templates.",
           GroupName = SystemTabNames.Content,

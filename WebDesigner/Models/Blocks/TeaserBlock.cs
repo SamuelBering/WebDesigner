@@ -22,10 +22,11 @@ namespace WebDesigner.Models.Blocks
         [Display(Name = "Image", Order = 30,
             GroupName = SystemTabNames.PageHeader)]
         [UIHint(UIHint.Image)]
-        public virtual ContentReference TeaserImage { get; set; }
+        public virtual ContentReference TeaserImage { get; set; }      
         [Display(Name = "Link", Order = 40,
             GroupName = SystemTabNames.PageHeader)]
         public virtual PageReference TeaserLink { get; set; }
+        [CultureSpecific]
         [Display(Name = "Link text on button", Order = 50,
            GroupName = SystemTabNames.PageHeader)]
         public virtual string TeaserLinkText { get; set; }

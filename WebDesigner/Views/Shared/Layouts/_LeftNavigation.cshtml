@@ -10,8 +10,21 @@
     <div id="breadcrumb">
         <div class="container">
             <div class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li>About Us</li>
+
+                @if (Model.AncestorPages != null)
+                {
+                    foreach (var ancestorPage in Model.AncestorPages.Reverse())
+                    {
+                        <li>
+                            @Html.ContentLink(ancestorPage.ContentLink)
+                        </li>
+                    }
+                }
+
+                @*<li><a href="index.html">Home</a></li>*@
+                <li>@Model.CurrentPage.Name</li>
+
+                @*<li>About Us</li>*@
             </div>
         </div>
     </div>
@@ -20,24 +33,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-1 leftNavigation">
-            @Html.ContentLink(Model.CurrentPage)
-            <ul>
-                @foreach (SitePageData page in Model.MenuPages)
-                {
-                    <li>@Html.ContentLink(page.ContentLink)</li>
-                }
-            </ul>
+            @if (Model.SubMenuPages != null && Model.SubMenuPages.Count() > 0)
+            {
+                <text>
+                    @Html.ContentLink(Model.SubMenuRootPage)
+                </text>
+                <ul>
+                    @foreach (SitePageData page in Model.SubMenuPages)
+                    {
+                        <li>@Html.ContentLink(page.ContentLink)</li>
+                    }
+                </ul>
+            }
         </div>
-        <div class="col-md-10">
+        <div class="col-md-11">
             @RenderBody()
         </div>
     </div>
 </div>
-@*<div class="row">
-        <div class="span4">
-            @RenderSection("_LeftNavigationMenu", required: false)
-        </div>
-        <div class="span8">
-            @RenderBody()
-        </div>
-    </div>*@

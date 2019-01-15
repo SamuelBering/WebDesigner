@@ -2,14 +2,9 @@
 @using EPiServer.Web.Mvc.Html
 @model PageViewModel<WebDesigner.Models.Pages.StaffPage>
 
-<div id="breadcrumb">
-    <div class="container">
-        <div class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Lisa Andersson</li>
-        </div>
-    </div>
-</div>
+@{
+    Layout = "~/Views/Shared/Layouts/_LeftNavigation.cshtml";
+}
 
 <div class="aboutus">
 

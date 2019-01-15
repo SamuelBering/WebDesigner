@@ -44,19 +44,36 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="navbar-brand">
-                            <a href="index.html"><h1><span>@(Model.StartPage.CompanyName ?? Model.SiteDefinition.Name)</span></h1></a>
+                            <a href="@(Model.StartPage!=null ? Url.ContentUrl(Model.StartPage.ContentLink):"#")"><h1><span>@(Model.StartPage.CompanyName ?? Model.SiteDefinition.Name)</span></h1></a>
                         </div>
                     </div>
 
                     <div class="navbar-collapse collapse">
                         <div class="menu">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation"><a href="/en" class="active">Home</a></li>
-                                <li role="presentation"><a href="/en/about-us">About Us</a></li>
-                                <li role="presentation"><a href="services.html">Services</a></li>
-                                <li role="presentation"><a href="portfolio.html">Portfolio</a></li>
-                                <li role="presentation"><a href="blog.html">Blog</a></li>
-                                <li role="presentation"><a href="contact.html">Contact</a></li>
+                                @if (Model.StartPage != null)
+                                {
+                                    <li role="presentation">
+                                        @Html.ContentLink(Model.StartPage.Name, Model.StartPage.ContentLink)
+                                    </li>
+                                }
+
+                                @if (Model.MenuPages != null)
+                                {
+                                    foreach (var menuPage in Model.MenuPages)
+                                    {
+                                        <li role="presentation">
+                                            @Html.ContentLink(menuPage.Name, menuPage.ContentLink)
+                                        </li>
+                                    }
+                                }
+
+                                @*<li role="presentation"><a href="/en" class="active">Home</a></li>
+        <li role="presentation"><a href="/en/about-us">About Us</a></li>
+        <li role="presentation"><a href="services.html">Services</a></li>
+        <li role="presentation"><a href="portfolio.html">Portfolio</a></li>
+        <li role="presentation"><a href="blog.html">Blog</a></li>
+        <li role="presentation"><a href="contact.html">Contact</a></li>*@
                             </ul>
                         </div>
                     </div>
@@ -67,7 +84,8 @@
     @RenderSection("_BreadCrump", required: false)
     @RenderBody()
     <footer class="alert alert-success">
-        @Html.RenderFooterText()
+        
+        @Html.RenderFooterText(Model.Loader)
     </footer>
 </body>
 </html>

@@ -2,6 +2,7 @@
 using WebDesigner.Models.Pages;
 using EPiServer.Core;
 using EPiServer.Web;
+using EPiServer;
 
 namespace WebDesigner.Models.ViewModels
 {
@@ -10,7 +11,12 @@ namespace WebDesigner.Models.ViewModels
         public T CurrentPage { get; set; }
         public SiteDefinition SiteDefinition { get; set; }
         public StartPage StartPage { get; set; }
+        public SitePageData SubMenuRootPage { get; set; }
         public IEnumerable<SitePageData> MenuPages { get; set; }
+        public IEnumerable<SitePageData> SubMenuPages { get; set; }
+        public IEnumerable<SitePageData> AncestorPages { get; set; }
+        public IContentLoader Loader { get; set; }
+
         public IContent Section { get; set; }
         public PageViewModel(T currentPage)
         {

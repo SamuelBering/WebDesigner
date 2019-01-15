@@ -295,8 +295,9 @@ a:hover {
 }
 
 .leftNavigation {
+    margin-top: 153px;
     font-size: 12px;
-    top: 40vh;
+    /*top: 40vh;*/
     text-transform: uppercase;
     font-weight: 700;
 }
