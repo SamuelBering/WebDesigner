@@ -245,8 +245,10 @@
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
+    <Compile Include="Business\SelectionFactories\SymbolSelectionFactory.cs" />
     <Compile Include="Controllers\ServicesPageController.cs" />
     <Compile Include="Controllers\ServicePageController.cs" />
+    <Compile Include="Controllers\ServicePagePartialController.cs" />
     <Compile Include="Controllers\StaffPagePartialController.cs" />
     <Compile Include="Controllers\StaffPageController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
@@ -468,6 +470,7 @@
     <Content Include="Views\Shared\Layouts\_LeftNavigation.cshtml" />
     <Content Include="Views\ServicesPage\Index.cshtml" />
     <Content Include="Views\ServicePage\Index.cshtml" />
+    <Content Include="Views\ServicePagePartial\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

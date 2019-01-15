@@ -1,0 +1,14 @@
+﻿@using WebDesigner.Models.ViewModels
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<WebDesigner.Models.Pages.ServicePage>
+
+<li>
+    <a href="@Url.ContentUrl(Model.CurrentPage.ContentLink)">
+        <div class="media-left">
+            <i class="@Model.CurrentPage.Symbol"></i>
+        </div>
+        <div class="media-body">
+            @Html.PropertyFor(m => m.CurrentPage.MainBody)
+        </div>
+    </a> 
+</li>

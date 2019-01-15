@@ -22,10 +22,8 @@ namespace WebDesigner.Models.Pages
             Description = "Drag and drop service pages here",
             GroupName = SystemTabNames.Content,
             Order = 20)]
-        [AllowedTypes(typeof(StandardPage), typeof(BlockData),
-                      typeof(ImageData), typeof(ContentFolder))]
+        [AllowedTypes(typeof(ServicePage))]
         public virtual ContentArea MainContentArea { get; set; }
-
 
         [CultureSpecific]
         [Display(Name = "Main body heading",

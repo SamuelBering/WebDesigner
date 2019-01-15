@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using AlloyTraining.Business.SelectionFactories;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.Shell.ObjectEditing;
 using EPiServer.SpecializedProperties;
 using EPiServer.Web;
 
@@ -14,6 +16,16 @@ namespace WebDesigner.Models.Pages
         Description = "Here you can present a specific service for your company.")]
     [SiteStartIcon]
     public class ServicePage : StandardPage
-    {                           
+    {
+        public override void SetDefaultValues(ContentType contentType)
+        {
+            base.SetDefaultValues(contentType);
+            Symbol = "fa fa-pencil";
+        }
+
+        [SelectOne(SelectionFactoryType = typeof(SymbolSelectionFactory))]
+        [Display(Name = "Symbol",
+            GroupName = SystemTabNames.Content, Order = 20)]
+        public virtual string Symbol { get; set; }
     }
 }
