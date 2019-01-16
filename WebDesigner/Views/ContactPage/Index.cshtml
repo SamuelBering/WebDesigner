@@ -1,0 +1,20 @@
+﻿@using WebDesigner.Models.ViewModels
+@using EPiServer.Web.Mvc.Html
+@model PageViewModel<WebDesigner.Models.Pages.ContactPage>
+
+@{
+    Layout = "~/Views/Shared/Layouts/_LeftNavigation.cshtml";
+}
+
+<section id="contact-page">
+    <div class="container">
+        <div class="">
+            <br />
+            @Html.PropertyFor(m=>m.CurrentPage.MainBody)    
+
+            @Html.PropertyFor(m=>m.CurrentPage.MainContentArea, new { CssClass= "services-main-content-area" })
+            @*<h2>Drop Your Message</h2>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>*@
+        </div>
+    </div>
+</section>

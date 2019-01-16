@@ -1186,3 +1186,17 @@ a.scrollup:hover{
         margin-bottom:10px;
     }
 
+    .services-main-content-area .EPiServerForms .FormChoice .Form__Element__Caption {
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+
+    .services-main-content-area .EPiServerForms .FormChoice {
+        margin-bottom: 20px;
+    }
+
+    .services-main-content-area .EPiServerForms textarea.FormTextbox__Input {
+        width: 100%;
+        height: 100px;
+    }
+

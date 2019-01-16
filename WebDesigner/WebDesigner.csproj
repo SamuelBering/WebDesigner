@@ -246,6 +246,7 @@
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\SelectionFactories\SymbolSelectionFactory.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\ServicesPageController.cs" />
     <Compile Include="Controllers\ServicePageController.cs" />
     <Compile Include="Controllers\ServicePagePartialController.cs" />
@@ -265,6 +266,7 @@
     <Compile Include="Models\Pages\ServicePage.cs" />
     <Compile Include="Models\Pages\ServicesPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
+    <Compile Include="Models\Pages\ContactPage.cs" />
     <Compile Include="Models\Pages\StaffPage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\AboutUsPage.cs" />
@@ -471,6 +473,7 @@
     <Content Include="Views\ServicesPage\Index.cshtml" />
     <Content Include="Views\ServicePage\Index.cshtml" />
     <Content Include="Views\ServicePagePartial\Index.cshtml" />
+    <Content Include="Views\ContactPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
