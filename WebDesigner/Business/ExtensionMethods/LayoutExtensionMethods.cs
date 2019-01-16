@@ -54,7 +54,7 @@ namespace WebDesigner.Business.ExtensionMethods
             if (childPages != null && childPages.Count() > 0)
             {
                 foreach (var childPage in childPages)
-                {
+                {                
                     stringBuilder.Append("<div class='col-md-2'>");
                     RenderFooterText(stringBuilder, childPage, loader);
                     stringBuilder.Append("</div>");
