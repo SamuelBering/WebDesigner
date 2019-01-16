@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.Forms.Implementation.Elements;
 using EPiServer.SpecializedProperties;
 using EPiServer.Web;
 
@@ -22,7 +23,7 @@ namespace WebDesigner.Models.Pages
             Description = "Drag and drop service pages here",
             GroupName = SystemTabNames.Content,
             Order = 20)]
-        [AllowedTypes(typeof(ServicePage))]
+        [AllowedTypes(typeof(ServicePage), typeof(FormContainerBlock))]
         public virtual ContentArea MainContentArea { get; set; }
 
         [CultureSpecific]

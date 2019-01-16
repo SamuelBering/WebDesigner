@@ -1176,3 +1176,13 @@ a.scrollup:hover{
 	background-color:#ddd;
 	color:#1BBD36;
 }
+
+.services-main-content-area{
+    color: black;
+}
+
+    .services-main-content-area .EPiServerForms label.Form__Element__Caption {
+        width:80px;
+        margin-bottom:10px;
+    }
+
