@@ -66,14 +66,7 @@
                                             @Html.ContentLink(menuPage.Name, menuPage.ContentLink)
                                         </li>
                                     }
-                                }
-
-                                @*<li role="presentation"><a href="/en" class="active">Home</a></li>
-        <li role="presentation"><a href="/en/about-us">About Us</a></li>
-        <li role="presentation"><a href="services.html">Services</a></li>
-        <li role="presentation"><a href="portfolio.html">Portfolio</a></li>
-        <li role="presentation"><a href="blog.html">Blog</a></li>
-        <li role="presentation"><a href="contact.html">Contact</a></li>*@
+                                }                                
                             </ul>
                         </div>
                     </div>
@@ -83,9 +76,12 @@
     </header>
     @RenderSection("_BreadCrump", required: false)
     @RenderBody()
-    <footer class="alert alert-success">
-        
-        @Html.RenderFooterText(Model.Loader)
+    <footer>
+        <div class="footer">
+            <div class="container">          
+                @Html.RenderFooterText(Model.Loader)
+            </div>
+        </div>  
     </footer>
 </body>
 </html>
