@@ -245,7 +245,7 @@
     <Compile Include="Business\ExtensionMethods\MiscExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\SectionExtensionMethods.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
-    <Compile Include="Business\ScheduledJobs\ScannerScheduledJob.cs" />
+    <Compile Include="Business\ScheduledJobs\NewsLetterReceiversScheduledJob.cs" />
     <Compile Include="Business\SelectionFactories\SymbolSelectionFactory.cs" />
     <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\ServicesPageController.cs" />
