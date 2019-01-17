@@ -49,6 +49,8 @@ namespace WebDesigner.Controllers
             else
                 viewmodel.SubMenuRootPage = viewmodel.AncestorPages.FirstOrDefault();
 
+            viewmodel.SubMenuRootPage = loader.Get<SitePageData>(viewmodel.SubMenuRootPage.ContentLink, viewmodel.CurrentPage.Language);
+
             viewmodel.SubMenuPages = FilterForVisitor
                .Filter(loader.GetChildren<SitePageData>(viewmodel.SubMenuRootPage.ContentLink))
                .Cast<SitePageData>().Where(page => page.VisibleInMenu);

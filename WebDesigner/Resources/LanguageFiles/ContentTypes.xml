@@ -192,6 +192,18 @@
             <caption>Picture of the staff</caption>
             <help>A picture placed above Main body</help>
           </StaffImage>
+          <StaffName>
+            <caption>Full name</caption>
+            <help>Full name of this person</help>
+          </StaffName>
+          <StaffEmail>
+            <caption>Email</caption>
+            <help>Email to this person</help>
+          </StaffEmail>
+          <StaffPhone>
+            <caption>Phone</caption>
+            <help>Phone to this person</help>
+          </StaffPhone>
         </properties>
       </staffpage>
     </contenttypes>
@@ -388,6 +400,18 @@
             <caption>Bild på medarbetaren</caption>
             <help>En bild placerad ovanför Main body</help>
           </StaffImage>
+          <StaffName>
+            <caption>Fullständigt namn</caption>
+            <help>Personens fullständiga namn</help>
+          </StaffName>
+          <StaffEmail>
+            <caption>Email</caption>
+            <help>Email till personen</help>
+          </StaffEmail>
+          <StaffPhone>
+            <caption>Telefon</caption>
+            <help>Telefon till personen</help>
+          </StaffPhone>
         </properties>
       </staffpage>
     </contenttypes>

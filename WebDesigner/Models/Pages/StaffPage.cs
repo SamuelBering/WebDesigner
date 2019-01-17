@@ -18,5 +18,22 @@ namespace WebDesigner.Models.Pages
          GroupName = SystemTabNames.Content, Order = 20)]
         [UIHint(UIHint.Image)] // filters to only show images
         public virtual ContentReference StaffImage { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Staff full name",
+            GroupName = SystemTabNames.Content, Order = 30)]
+        public virtual string StaffName { get; set; }
+
+        [CultureSpecific]
+        [EmailAddress]
+        [Display(Name = "Staff email",
+            GroupName = SystemTabNames.Content, Order = 40)]
+        public virtual string StaffEmail { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Staff phone",
+           GroupName = SystemTabNames.Content, Order = 50)]
+        public virtual string StaffPhone { get; set; }
+
     }
 }

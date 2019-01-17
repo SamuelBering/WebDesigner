@@ -9,10 +9,23 @@
 <div class="aboutus">
 
     <div class="container">
-        <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <img src="@(Model.CurrentPage.StaffImage!=null ? Url.ContentUrl(Model.CurrentPage.StaffImage):Url.Content("~/static/images/services/1.jpg"))" alt="">
             @Html.PropertyFor(m => m.CurrentPage.MainBody)
 
+        </div>
+        <div class="col-md-8 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <div style="color:black;font-size:16px;">
+                <div>
+                    @Html.PropertyFor(m => m.CurrentPage.StaffName)
+                </div>
+                <div>
+                    @Html.PropertyFor(m => m.CurrentPage.StaffEmail)
+                </div>
+                <div>
+                    @Html.PropertyFor(m => m.CurrentPage.StaffPhone)
+                </div>
+            </div>           
         </div>
     </div>
 </div>
