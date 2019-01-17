@@ -16,6 +16,50 @@
         <name>Any File</name>
         <description>Use this to upload any type of file.</description>
       </anyfile>
+      <teaserblock>
+        <name>Teaser</name>
+        <description>User this for creating a teaser for your customers</description>
+        <properties>
+          <TeaserHeading>
+            <caption>Heading</caption>
+            <help>Heading for this teaser</help>
+          </TeaserHeading>
+          <TeaserText>
+            <caption>Text</caption>
+            <help>Text for this teaser</help>
+          </TeaserText>
+          <TeaserImage>
+            <caption>Image</caption>
+            <help>Image for this teaser</help>
+          </TeaserImage>
+          <TeaserLink>
+            <caption>Link</caption>
+            <help>Link for this teaser</help>
+          </TeaserLink>
+          <TeaserLinkText>
+            <caption>Link text</caption>
+            <help>Link text for this teaser</help>
+          </TeaserLinkText>
+        </properties>
+      </teaserblock>
+      <skillblock>
+        <name>Skill</name>
+        <description>Show one of your skills</description>
+        <properties>
+          <SkillHeading>
+            <caption>Heading</caption>
+            <help>Heading for this skill</help>
+          </SkillHeading>
+          <SkillValue>
+            <caption>Value</caption>
+            <help>Value for this skill (%)</help>
+          </SkillValue>
+          <SkillColor>
+            <caption>Color</caption>
+            <help>Color for this skill</help>
+          </SkillColor>
+        </properties>
+      </skillblock>
       <sitepagedata>
         <properties>
           <metatitle>
@@ -36,6 +80,16 @@
           </PageImage>
         </properties>
       </sitepagedata>
+      <standardpage>
+        <name>Standard</name>
+        <description>Standard page with a Mainbody property</description>
+        <properties>
+          <MainBody>
+            <caption>Main body</caption>
+            <help>Here you can add rich text including images and links</help>
+          </MainBody>
+        </properties>
+      </standardpage>
       <startpage>
         <name>Start</name>
         <description>The home page for a website with an area for blocks and partial pages.</description>
@@ -96,6 +150,40 @@
           </MainBodyImage>
         </properties>
       </aboutuspage>
+      <servicespage>
+        <name>Services</name>
+        <description>The services page let you present your services</description>
+        <properties>
+          <MainContentArea>
+            <caption>Main content area</caption>
+            <help>Drag and drop service pages here</help>
+          </MainContentArea>
+          <MainBodyHeading>
+            <caption>Main body heading</caption>
+            <help>Short heading above the Main body</help>
+          </MainBodyHeading>
+        </properties>
+      </servicespage>
+      <contactpage>
+        <name>Contact</name>
+        <description>The contact page let you configure a contact form</description>
+        <properties>
+          <MainContentArea>
+            <caption>Main content area</caption>
+            <help>Drag and drop your contact form here</help>
+          </MainContentArea>
+        </properties>
+      </contactpage>
+      <servicepage>
+        <name>Service</name>
+        <description>The service page let you present a specific service</description>
+        <properties>
+          <Symbol>
+            <caption>Symbol</caption>
+            <help>A symbol for this service</help>
+          </Symbol>
+        </properties>
+        </servicepage>
       <staffpage>
         <name>Staff</name>
         <description>The staff page let you present your staff</description>
@@ -124,6 +212,50 @@
         <name>Valfri fil</name>
         <description>Använd denna för att ladda upp vilken typ av fil som helst.</description>
       </anyfile>
+      <teaserblock>
+        <name>Aptitretare</name>
+        <description>Använd denna för att skapa en aptitretare för dina kunder</description>
+        <properties>
+          <TeaserHeading>
+            <caption>Rubrik</caption>
+            <help>Rubrik för aptitretaren</help>
+          </TeaserHeading>
+          <TeaserText>
+            <caption>Text</caption>
+            <help>Text för aptitretaren</help>
+          </TeaserText>
+          <TeaserImage>
+            <caption>Bild</caption>
+            <help>Bild för aptitretaren</help>
+          </TeaserImage>
+          <TeaserLink>
+            <caption>Länk</caption>
+            <help>Länk för aptitretaren</help>
+          </TeaserLink>
+          <TeaserLinkText>
+            <caption>Länktext</caption>
+            <help>Länktext för aptitretaren</help>
+          </TeaserLinkText>
+        </properties>
+      </teaserblock>
+      <skillblock>
+        <name>Färdighet</name>
+        <description>Visa en av dina färdigheter</description>
+        <properties>
+          <SkillHeading>
+            <caption>Rubrik</caption>
+            <help>Rubrik för den här färdigheten</help>
+          </SkillHeading>
+          <SkillValue>
+            <caption>Värde</caption>
+            <help>Värde för den här färdigheten (%)</help>
+          </SkillValue>
+          <SkillColor>
+            <caption>Färg</caption>
+            <help>Färg för den här färdigheten</help>
+          </SkillColor>
+        </properties>
+      </skillblock>
       <sitepagedata>
         <properties>
           <metatitle>
@@ -144,6 +276,16 @@
           </PageImage>
         </properties>
       </sitepagedata>
+      <standardpage>
+        <name>Standard</name>
+        <description>Standardsida med en huvudkropp</description>
+        <properties>
+          <MainBody>
+            <caption>Huvudkropp</caption>
+            <help>Här kan du lägga till formaterat text, bilder och länkar.</help>
+          </MainBody>
+        </properties>
+      </standardpage>
       <startpage>
         <name>Start</name>
         <description>Hemsidan för en webbplats med ett område för block och sidor.</description>
@@ -195,15 +337,49 @@
             <help>Dra och släpp bilder, block, mappar och sidor med partiella mallar</help>
           </RelatedContentArea>
           <MainBodyHeading>
-            <caption>Rubrik för Main body</caption>
+            <caption>Rubrik för huvudkropp</caption>
             <help>En kort inledande text ovanför Main body</help>
           </MainBodyHeading>
           <MainBodyImage>
-            <caption>Bild för Main body</caption>
+            <caption>Bild för huvudkropp</caption>
             <help>En bild placerad mellan Main body heading och Main body</help>
           </MainBodyImage>
         </properties>
       </aboutuspage>
+      <servicespage>
+        <name>Tjänster</name>
+        <description>På denna sida presenterar du dina tjänster</description>
+        <properties>
+          <MainContentArea>
+            <caption>Huvudinnehåll för denna sida</caption>
+            <help>Dra och släpp tjänste-sidor här</help>
+          </MainContentArea>
+          <MainBodyHeading>
+            <caption>Rubrik för huvudkropp</caption>
+            <help>Kort rubrik ovanför huvudkroppen</help>
+          </MainBodyHeading>
+        </properties>
+      </servicespage>
+      <contactpage>
+        <name>Kontakt</name>
+        <description>På denna sida konfigurerar du ett kontaktformulär</description>
+        <properties>
+          <MainContentArea>
+            <caption>Huvudinnehåll</caption>
+            <help>Dra och släpp ditt kontaktformulär här.</help>
+          </MainContentArea>
+        </properties>
+      </contactpage>
+      <servicepage>
+        <name>Tjänst</name>
+        <description>Här kan du presentera en specifik tjänst</description>
+        <properties>
+          <Symbol>
+            <caption>Symbol</caption>
+            <help>En symbol för denna tjänst</help>
+          </Symbol>
+        </properties>
+      </servicepage>
       <staffpage>
         <name>Medarbetare</name>
         <description>Denna sidtyp kan användas för att presentera dina medarbetare</description>

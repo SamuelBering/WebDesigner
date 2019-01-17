@@ -8,7 +8,7 @@ namespace WebDesigner.Models.Blocks
     [ContentType(DisplayName = "Teaser",
         GUID = "fb9e0eb8-2b9a-4f0e-ba10-f23293eafcf9",
         GroupName = SiteGroupNames.Common,
-        Description = " Use this for rich text with heading, image and page link that will be reused in multiple places.")]
+        Description = "Use this for rich text with heading, image and page link that will be reused in multiple places.")]
     [SiteBlockIcon]
     public class TeaserBlock : BlockData
     {
