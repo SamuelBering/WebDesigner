@@ -26,7 +26,6 @@ namespace WebDesigner.Controllers
 
             return View(viewmodel);
 
-            //return View(CreatePageViewModel(currentPage));
         }
     }
 }

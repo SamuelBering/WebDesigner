@@ -20,30 +20,4 @@ namespace WebDesigner.Controllers
             return PartialView(viewmodel);
         }
     }
-    //[TemplateDescriptor(Tags = new[] { SiteTags.Wide })]
-    //public class TeaserBlockWideController : BlockController<TeaserBlock>
-    //{
-    //    public override ActionResult Index(TeaserBlock currentBlock)
-    //    {
-    //        var viewmodel = new TeaserBlockViewModel
-    //        {
-    //            CurrentBlock = currentBlock,
-    //            TodaysVisitorCount = (new Random()).Next(300, 900)
-    //        };
-    //        return PartialView(viewmodel);
-    //    }
-    //}
-    //[TemplateDescriptor(Tags = new[] { SiteTags.Narrow })]
-    //public class TeaserBlockNarrowController : BlockController<TeaserBlock>
-    //{
-    //    public override ActionResult Index(TeaserBlock currentBlock)
-    //    {
-    //        var viewmodel = new TeaserBlockViewModel
-    //        {
-    //            CurrentBlock = currentBlock,
-    //            TodaysVisitorCount = (new Random()).Next(300, 900)
-    //        };
-    //        return PartialView(viewmodel);
-    //    }
-    //}
 }
