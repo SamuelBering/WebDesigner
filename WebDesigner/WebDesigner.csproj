@@ -272,6 +272,7 @@
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\AboutUsPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\ViewModels\AboutUsPageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\TeaserBlockViewModel.cs" />

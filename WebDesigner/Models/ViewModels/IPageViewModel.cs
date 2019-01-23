@@ -10,12 +10,12 @@ namespace WebDesigner.Models.ViewModels
     {
         T CurrentPage { get; }
         SiteDefinition SiteDefinition { get; set; }
-        StartPage StartPage { get; }
-        SitePageData SubMenuRootPage { get; }
-        IEnumerable<SitePageData> MenuPages { get; }
-        IEnumerable<SitePageData> SubMenuPages { get; }
-        IEnumerable<SitePageData> AncestorPages { get; }
-        IContent Section { get; }
+        StartPage StartPage { get; set; }
+        SitePageData SubMenuRootPage { get; set; }
+        IEnumerable<SitePageData> MenuPages { get; set; }
+        IEnumerable<SitePageData> SubMenuPages { get; set; }
+        IEnumerable<SitePageData> AncestorPages { get; set; }
+        IContent Section { get; set; }
         IContentLoader Loader { get; set; }
     }
 }

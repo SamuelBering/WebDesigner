@@ -28,10 +28,9 @@ namespace WebDesigner.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index");
         }
-        protected IPageViewModel<TPage> CreatePageViewModel<TPage>(TPage currentPage)
-                    where TPage : SitePageData
+
+        protected void InitPageViewModel(IPageViewModel<T> viewmodel, T currentPage)
         {
-            var viewmodel = PageViewModel.Create(currentPage);
             viewmodel.Loader = loader;
             viewmodel.SiteDefinition = this.siteDefinitionResolver.GetByContent(ContentReference.StartPage, false);
             viewmodel.StartPage = loader.Get<StartPage>(ContentReference.StartPage);
@@ -56,6 +55,39 @@ namespace WebDesigner.Controllers
                .Cast<SitePageData>().Where(page => page.VisibleInMenu);
 
             viewmodel.Section = currentPage.ContentLink.GetSection();
+        }
+
+        protected IPageViewModel<T> CreatePageViewModel(T currentPage)
+                    
+        {
+            var viewmodel = PageViewModel.Create(currentPage);
+
+            InitPageViewModel(viewmodel, currentPage);
+
+            //viewmodel.Loader = loader;
+            //viewmodel.SiteDefinition = this.siteDefinitionResolver.GetByContent(ContentReference.StartPage, false);
+            //viewmodel.StartPage = loader.Get<StartPage>(ContentReference.StartPage);
+
+            //viewmodel.MenuPages = FilterForVisitor
+            //    .Filter(loader.GetChildren<SitePageData>(ContentReference.StartPage))
+            //    .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            //viewmodel.AncestorPages = FilterForVisitor
+            //    .Filter(loader.GetAncestors(currentPage.ContentLink))
+            //    .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            //if (viewmodel.AncestorPages.Count() <= 1)
+            //    viewmodel.SubMenuRootPage = currentPage;
+            //else
+            //    viewmodel.SubMenuRootPage = viewmodel.AncestorPages.FirstOrDefault();
+
+            //viewmodel.SubMenuRootPage = loader.Get<SitePageData>(viewmodel.SubMenuRootPage.ContentLink, viewmodel.CurrentPage.Language);
+
+            //viewmodel.SubMenuPages = FilterForVisitor
+            //   .Filter(loader.GetChildren<SitePageData>(viewmodel.SubMenuRootPage.ContentLink))
+            //   .Cast<SitePageData>().Where(page => page.VisibleInMenu);
+
+            //viewmodel.Section = currentPage.ContentLink.GetSection();
             return viewmodel;
         }
     }

@@ -2,6 +2,8 @@
 using EPiServer;
 using System.Web.Mvc;
 using EPiServer.Web;
+using WebDesigner.Models.ViewModels;
+using EPiServer.Core;
 
 namespace WebDesigner.Controllers
 {
@@ -13,7 +15,18 @@ namespace WebDesigner.Controllers
 
         public ActionResult Index(AboutUsPage currentPage)
         {
-            return View(CreatePageViewModel(currentPage));
+            AboutUsPageViewModel<AboutUsPage> viewmodel = new AboutUsPageViewModel<AboutUsPage>(currentPage);
+
+            InitPageViewModel(viewmodel, currentPage);
+
+            foreach(var staffPage in viewmodel.SubMenuPages)
+            {
+                viewmodel.AllStaffContentArea.Items.Add(new ContentAreaItem { ContentLink=staffPage.ContentLink});
+            }
+
+            return View(viewmodel);
+
+            //return View(CreatePageViewModel(currentPage));
         }
     }
 }
